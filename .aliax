@@ -1,0 +1,39 @@
+# common
+alias ll='ls -lahtr'                                         # List all file in long list format by modification time
+alias ..='cd ..'                                             # Go up one directory
+alias ...='cd ../..'                                         # Go up two directories
+alias ....='cd ../../..'                                     # Go up three directories
+alias -- -='cd -'                                            # Go back
+alias c='clear'                                              # Clear Screen
+alias k='clear'                                              # Clear Screen
+alias cls='clear'                                            # Clear Screen
+alias _="sudo"                                               # Execute with sudo
+alias q='exit'                                               # Logout
+alias md='mkdir -p'                                          # Recursive create sub dirctory
+alias rm='rm -i'                                             # 多一層 confirm 確認刪除, 更好的方法是改為 mv $@ ./trash
+alias df='df -h'                                             # Show disk info for human
+
+# jvm
+alias psjar='ps aux | grep jar'                              # List jar process
+
+# py
+alias py3='python3'                                          # python3
+alias py2='python2'                                          # python2
+
+# k8s
+alias kc='kubectl'
+alias km='kustomize'
+
+# listen port tools function
+alias lp='function _lp(){ lsof -n -iTCP:$1 | grep LISTEN; };_lp'                            # list process used ports, $1 set which prot be listener
+alias listports='lsof -i -P -n | awk '\''NR!=1 {print $2, $9}'\'' | sed '\''s/->/ /'\'''    # list process used prots details
+alias sp='function _sp(){ nmap -PS $1};_sp'                                                 # nmap ports
+
+# visual studio code
+alias vscode='open -a /Applications/Visual\ Studio\ Code.app/'
+
+# intelliJ
+alias ij='open -a /Applications/IntelliJ\ IDEA.app/'
+
+# let's encrypt ACME https://github.com/acmesh-official/acme.sh/wiki/%E8%AF%B4%E6%98%8E
+alias acme='~/.acme.sh/acme.sh'
